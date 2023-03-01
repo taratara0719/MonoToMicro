@@ -23,6 +23,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import java.util.logging.*;
+import iava.io.File;
 
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
@@ -30,6 +32,9 @@ public class Application {
     public static void main(String[] args) {
     	System.setProperty("spring.config.name", "application");
     	SpringApplication.run(Application.class, args);
+        File newfile = new File("d:\\Sample\\test00.txt");
+        FileHandler("C:\\sample\\sample.log");
+        logger.addHandler(handler);
     }
     
     public WebMvcConfigurer corsConfigurer() {
