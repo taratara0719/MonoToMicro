@@ -32,8 +32,8 @@ public class Application {
     public static void main(String[] args) {
     	System.setProperty("spring.config.name", "application");
     	SpringApplication.run(Application.class, args);
-        File newfile = new File("d:\\Sample\\test00.txt");
-        FileHandler("C:\\sample\\sample.log");
+        File newfile = new File("./test00.txt");
+        FileHandler("./sample.log");
         logger.addHandler(handler);
     }
     
